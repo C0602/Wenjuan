@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="saveAction" class="com.action.SaveAction">
+			<result name="success">index.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="jumptoFinishAction" class="com.action.JumptoFinishAction">
+			<result name="success">Formation.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="saveresultAction" class="com.action.SaveresultAction">
+			<result name="success">index.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="queryAction" class="com.action.QueryAction">
+			<result name="success">CreateWenjuan.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="deleteQuestionByIDAction" class="com.action.DeleteQuestionByIDAction">
+			<result name="success">CreateWenjuan.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="queryQuestionByIdAction" class="com.action.QueryQuestionByIdAction">
+			<result name="success">UpdateFormation.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="updateAction" class="com.action.UpdateAction">
+			<result name="success">CreateWenjuan.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+	</package>
+</struts>

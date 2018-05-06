@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.model.QuestionResult" table="ResultQuestion">
+		<id name="id" column="id">
+			<generator class="native"/> <!-- 配置的是自动增长标识列 -->
+		</id>
+		<property name="resulttitle"/>
+		<property name="resulttype"/>
+		<list name="questionList" table="Resultvalues" lazy="false" cascade="save-update">
+			<key column="questionid"></key>
+			<list-index></list-index>
+			<element type="string" column="value" not-null="true"></element>
+		</list>
+		<list name="titleList" table="Titlevalues" lazy="false" cascade="save-update">
+			<key column="titleid"></key>
+			<list-index></list-index>
+			<element type="string" column="title" not-null="true"></element>
+		</list>
+		<list name="typeList" table="Typevalues" lazy="false" cascade="save-update">
+			<key column="typeid"></key>
+			<list-index></list-index>
+			<element type="string" column="type" not-null="true"></element>
+		</list>
+	</class>
+</hibernate-mapping>
